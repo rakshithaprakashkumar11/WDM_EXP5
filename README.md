@@ -1,5 +1,5 @@
 ### EX5 Information Retrieval Using Boolean Model in Python
-### DATE: 21/09/2024
+### DATE: 
 ### AIM: To implement Information Retrieval Using Boolean Model in Python.
 ### Description:
 <div align = "justify">
@@ -31,9 +31,8 @@ class BooleanRetrieval:
     def __init__(self):
         self.index = {}
         self.documents_matrix = None
-
-    ```
-    def index_document(self, doc_id, text):
+```
+def index_document(self, doc_id, text):
     terms = text.lower().split()
     print("Document -", doc_id, terms)
 
@@ -109,18 +108,23 @@ else:
     print("No results found for the query.")
 ```
 
+
+
+
 # Example usage:
-if name == "main": indexer = BooleanRetrieval()
-```
+if __name__ == "__main__":
+    indexer = BooleanRetrieval()
+
+   ```
 # Indexing documents
 documents = {
- 1: "Python is a programming language",
- 2: "Information retrieval deals with finding information",
- 3: "Boolean models are used in information retrieval"
+    1: "Python is a programming language",
+    2: "Information retrieval deals with finding information",
+    3: "Boolean models are used in information retrieval"
 }
 
 for doc_id, text in documents.items():
- indexer.index_document(doc_id, text)
+    indexer.index_document(doc_id, text)
 
 # Create a matrix of zeros and ones
 indexer.create_documents_matrix(documents)
@@ -133,11 +137,13 @@ indexer.print_all_terms()
 query1 = input("Enter your boolean query: ")
 print(f"Results for '{query1}': {indexer.boolean_search(query1)}")
 ```
-    
 
 ### Output:
-![image](https://github.com/user-attachments/assets/b8f44541-31a1-4b8b-8fc6-f83011507d77)
+![image](https://github.com/user-attachments/assets/c59c51e1-1dd5-412a-8999-03e3c4eb65a2)
 
 
 ### Result:
 The program has been executed successfully
+
+
+   
